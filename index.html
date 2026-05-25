@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#f5f5f7">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <title>It Can't Be Alice</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+
+    <!-- Header -->
+    <header id="header">
+      <h1>It Can't Be <span>Alice</span></h1>
+      <div id="hint-progress">Loading…</div>
+    </header>
+
+    <!-- Hint Button -->
+    <div id="top-bar">
+      <button id="next-hint-btn" type="button">Reveal Next Hint</button>
+    </div>
+
+    <!-- Hint Log -->
+    <section id="hints-section" aria-label="Hints">
+      <div id="hints-label">Hints</div>
+      <div id="hint-log" role="log" aria-live="polite" aria-label="Revealed hints"></div>
+    </section>
+
+    <!-- Name Grid -->
+    <section id="grid-section" aria-label="Name candidates">
+      <div id="name-grid" role="list"></div>
+    </section>
+
+  </div>
+
+  <!-- Win Screen (overlay) -->
+  <div id="win-screen" role="dialog" aria-modal="true" aria-labelledby="win-title">
+    <div id="win-emoji" aria-hidden="true"></div>
+    <div id="win-title"></div>
+    <div id="win-name"></div>
+    <div id="win-subtitle"></div>
+    <div id="fail-actions">
+      <button id="review-btn" type="button">Review hints &amp; names</button>
+    </div>
+    <button id="play-again-btn" type="button">Play Again</button>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
