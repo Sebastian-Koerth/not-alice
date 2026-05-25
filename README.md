@@ -1,1 +1,1 @@
-# not-alice
+# A simple not Alice game implementation
